@@ -1,8 +1,8 @@
-<nb-card size="giant">
+<nb-card size="giant" style="overflow: scroll;">
   <nb-tabset fullWidth>
 
-    <nb-tab tabTitle="Contacts">
-      <nb-list>
+    <nb-tab tabTitle="My Doctors">
+      <nb-list> 
         <nb-list-item class="contact" *ngFor="let c of contacts">
           <nb-user [picture]="c.user.picture" [name]="c.user.name" [title]="c.type" size="large"></nb-user>
           <nb-icon icon="phone-outline" pack="eva"></nb-icon>
@@ -10,11 +10,12 @@
       </nb-list>
     </nb-tab>
 
-    <nb-tab tabTitle="Recent">
+    <nb-tab tabTitle="Recent Activity">
       <nb-list>
         <nb-list-item class="contact" *ngFor="let c of recent">
           <nb-user [picture]="c.user.picture" [name]="c.user.name" [title]="c.type" size="large"></nb-user>
-          <span class="caption">{{ c.time | date: 'shortTime' }}</span>
+          <span style="font-weight: bold;">{{c.action}}</span>
+          <span class="caption">{{ c.time | date: 'medium' }}</span>
         </nb-list-item>
       </nb-list>
     </nb-tab>

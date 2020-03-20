@@ -12,6 +12,7 @@ export interface Contacts {
 
 export interface RecentUsers extends Contacts {
   time: number;
+  action: string;
 }
 
 export abstract class UserData {
