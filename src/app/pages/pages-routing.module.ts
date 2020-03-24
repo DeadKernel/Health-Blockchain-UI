@@ -16,6 +16,10 @@ const routes: Routes = [{
       component: DashboardComponent,
     },
     {
+      path: 'add-doctor',
+      component: ECommerceComponent
+    },
+    {
       path: 'layout',
       loadChildren: () => import('./layout/layout.module')
         .then(m => m.LayoutModule),
