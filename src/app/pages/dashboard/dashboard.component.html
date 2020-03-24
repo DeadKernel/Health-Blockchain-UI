@@ -19,26 +19,58 @@
 <div class="row justify-content-between">
  <div class="col-xxxl-4 col-xl-5 col-sm-12">
    <nb-card size="giant">
-     <img src="assets/images/eva.png" alt="" width="40%" style="border-radius: 250px;display: block; margin-left: auto; margin-right: auto; margin-top: 10%;">
-     <div class="h4 value" style="font-weight: 600; text-align: center; padding-top: 20px;">Aditya Padwal</div>
-     <div class="grid2x2">
-      <div class="box box1">
-        <div>one</div>
+     <img src="assets/images/patient1.jpeg" alt="" width="40%" style="border-radius: 250px;display: block; margin-left: auto; margin-right: auto; margin-top: 10%;">
+     <div class="h4 value" style="font-weight: 600; text-align: center; padding-top: 20px;">{{profile.fullName}}</div>
+     <div class="grid2x2 pt-5">
+      <div class="box box1 border-right">
+        <div class="profile-heading">GENDER</div>
+        <div class="profile-subheading pt-3">{{profile.gender}}</div>
       </div>
       <div class="box box2">
-        <div>two</div>
+        <div class="profile-heading">AGE</div>
+        <div class="profile-subheading pt-3">{{profile.age}}</div>
       </div>
-      <div class="box box3">
-        <div>three</div>
+      <div class="box box3 border-right pt-4 border-top">
+        <div class="profile-heading">WEIGHT</div>
+        <div class="profile-subheading pt-3">{{profile.weight}}</div>
       </div>
-      <div class="box box4">
-        <div>four</div>
+      <div class="box box4 pt-4 border-top">
+        <div class="profile-heading">HEIGHT</div>
+        <div class="profile-subheading pt-3">{{profile.height}}</div>
       </div>
      </div>
    </nb-card>
   </div> 
 
-  <div class="col-xxxl-5 col-xxl-5 col-lg-6 col-md-6 col-sm-12">
+
+  <div class="col-xxxl-3 col-sm-12">
+
+    <nb-card size="small">
+      <nb-card-header>Allergies</nb-card-header>
+        <nb-list>
+          <nb-list-item >
+            Peanuts
+          </nb-list-item>  
+          <nb-list-item >
+            Penicillin
+          </nb-list-item>           <!-- Enter for loop here -->
+        </nb-list>
+    </nb-card>
+
+    <nb-card size="small">
+      <nb-card-header>Conditions</nb-card-header>
+        <nb-list>
+          <nb-list-item >
+            Diabetes
+          </nb-list-item>  
+          <nb-list-item >
+            Hypertension
+          </nb-list-item>           <!-- Enter for loop here -->
+        </nb-list>
+    </nb-card>
+  </div>
+  
+  <div class="col-xxxl-5 col-xxl-5 col-lg-4 col-md-4 col-sm-12">
     <ngx-contacts></ngx-contacts>
   </div>
 
@@ -53,10 +85,4 @@
     <ngx-security-cameras></ngx-security-cameras>
   </div>  -->
 </div>
-<div class="row">
-  <!-- <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
-  <ngx-solar [chartValue]="solarValue"></ngx-solar>
 
-  <ngx-kitten></ngx-kitten> 
-</div> -->
-</div>

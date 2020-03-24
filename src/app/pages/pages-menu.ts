@@ -10,7 +10,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Home',
     icon: 'home-outline',
-    link: '/pages/iot-dashboard',
+    link: '/pages/dashboard',
     home: true
   },
   // {
@@ -207,10 +207,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //       title: 'Smart Table',
   //       link: '/pages/tables/smart-table',
   //     },
-  //     {
-  //       title: 'Tree Grid',
-  //       link: '/pages/tables/tree-grid',
-  //     },
+      {
+        title: 'My Reports',
+        link: '/pages/tables/my-reports',
+        icon: 'folder'
+      },
   //   ],
   // },
   // {

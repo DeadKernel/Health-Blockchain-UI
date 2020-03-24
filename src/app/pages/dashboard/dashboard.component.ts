@@ -2,11 +2,19 @@ import {Component, OnDestroy} from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
 import { takeWhile } from 'rxjs/operators' ;
 import { SolarData } from '../../@core/data/solar';
-
+import { ProfileService } from './profile.service';
+import * as moment from 'moment';
 interface CardSettings {
   title: string;
   iconClass: string;
   type: string;
+}
+interface Profile {
+  fullName: string;
+  gender: string;
+  age: string;
+  weight: string;
+  height: string;
 }
 
 @Component({
@@ -16,6 +24,7 @@ interface CardSettings {
 })
 export class DashboardComponent implements OnDestroy {
 
+  profile: Profile;
   private alive = true;
 
   solarValue: number;
@@ -79,7 +88,8 @@ export class DashboardComponent implements OnDestroy {
   };
 
   constructor(private themeService: NbThemeService,
-              private solarService: SolarData) {
+              private solarService: SolarData,
+              private profileService: ProfileService) {
     this.themeService.getJsTheme()
       .pipe(takeWhile(() => this.alive))
       .subscribe(theme => {
@@ -91,6 +101,23 @@ export class DashboardComponent implements OnDestroy {
       .subscribe((data) => {
         this.solarValue = data;
       });
+    
+    this.profileService.getPatientDetails(JSON.parse(localStorage.getItem('auth_app_token')).value).subscribe(data=>{
+      console.log(data);
+      
+       
+        this.profile = {
+          fullName: data['response'].fullName,
+          gender: data['response'].gender,
+          weight: data['response'].weight,
+          height: data['response'].height,
+          age: moment().diff(moment(data['response'].dob,'DD/MM/YYYY'),'years').toString()
+        }
+      
+    },
+    err =>{
+      console.log(err);
+    });
   }
 
   ngOnDestroy() {

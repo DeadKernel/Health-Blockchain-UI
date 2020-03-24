@@ -14,7 +14,7 @@ const routes: Routes = [{
       component: SmartTableComponent,
     },
     {
-      path: 'tree-grid',
+      path: 'my-reports',
       component: TreeGridComponent,
     },
   ],

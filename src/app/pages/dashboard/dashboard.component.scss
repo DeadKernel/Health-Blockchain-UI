@@ -32,17 +32,19 @@
 	}
 }
 .box {
-	margin: 20px;
+	margin: 15px;
 }
-.box1 {
-	background-color: red;
+.profile-heading {
+	color: #192038;
+    font-family: Open Sans, sans-serif;
+    font-size: 1.2375rem;
+    font-weight: 600;
+    line-height: 1.5rem;
 }
-.box2 {
-	background-color: orange;
-}
-.box3 {
-	background-color: purple;
-}
-.box4 {
-	background-color: grey;
+.profile-subheading {
+	font-family: Open Sans, sans-serif;
+    font-size: 1.8125rem;
+    font-weight: 600;
+	line-height: 1.5rem;
+	color: #8f9bb3;
 }
