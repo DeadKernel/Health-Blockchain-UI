@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>Enter your Medical Vitals</nb-card-header>
+      <nb-card-body>
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="GenderId" class="label">Gender</label>
+            <nb-radio-group formControlName="gender" name="GenderId">
+              <nb-radio
+                [value]="'Male'">
+                Male
+              </nb-radio>
+              <nb-radio
+                [value]="'Female'">
+                Female
+              </nb-radio>
+              <nb-radio
+                [value]="'Other'">
+                Other
+              </nb-radio>
+            </nb-radio-group>
+          </div>
+          <div class="form-group">
+            <label for="dob" class="label">Enter Date of Birth</label>
+            <input nbInput
+               placeholder="Click to open Date Picker"
+               [nbDatepicker]="formpicker"
+               id="dob"
+               formControlName="dob">
+            <nb-datepicker #formpicker ></nb-datepicker>
+          </div>
+          <div class="form-group">
+            <label for="height" class="label">Enter height(in cm.)</label>
+            <input type="number" nbInput fullWidth id="height" placeholder="E.g. 150" formControlName="height">
+          </div>
+          <div class="form-group">
+            <label for="weight" class="label">Enter weight(in kg.)</label>
+            <input type="number" nbInput fullWidth id="weight" placeholder="E.g. 50" formControlName="weight">
+          </div>
+          
+          <div class="form-group">
+            <label for="conditions" class="label">Specify Medical Conditions(separated by newline)</label>
+            <textarea nbInput placeholder="E.g. Hypertension" id="conditions" formControlName="conditions"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="allergies" class="label">Specify Allergies(separated by newline)</label>
+            <textarea nbInput placeholder="E.g. Peanuts" id="allergies" formControlName="allergies"></textarea>
+          </div>
+          <button type="submit" nbButton status="danger">Submit</button>
+        </form>
+      </nb-card-body>
+    </nb-card>
+
+   
+  </div>
+
+ 
+</div>

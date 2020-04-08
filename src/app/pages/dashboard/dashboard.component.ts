@@ -15,6 +15,8 @@ interface Profile {
   age: string;
   weight: string;
   height: string;
+  conditions: string[];
+  allergies: string[];
 }
 
 @Component({
@@ -111,7 +113,10 @@ export class DashboardComponent implements OnDestroy {
           gender: data['response'].gender,
           weight: data['response'].weight,
           height: data['response'].height,
-          age: moment().diff(moment(data['response'].dob,'DD/MM/YYYY'),'years').toString()
+          age: moment().diff(moment(data['response'].dob,'DD/MM/YYYY'),'years').toString(),
+          conditions: data['response'].conditions,
+          allergies: data['response'].allergies
+           
         }
       
     },

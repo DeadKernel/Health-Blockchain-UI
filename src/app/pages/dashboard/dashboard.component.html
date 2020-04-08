@@ -48,24 +48,20 @@
     <nb-card size="small">
       <nb-card-header>Allergies</nb-card-header>
         <nb-list>
-          <nb-list-item >
-            Peanuts
+          <nb-list-item *ngFor="let allergy of profile.allergies">
+            {{allergy}}
           </nb-list-item>  
-          <nb-list-item >
-            Penicillin
-          </nb-list-item>           <!-- Enter for loop here -->
+         
         </nb-list>
     </nb-card>
 
     <nb-card size="small">
       <nb-card-header>Conditions</nb-card-header>
         <nb-list>
-          <nb-list-item >
-            Diabetes
+          <nb-list-item *ngFor="let condition of profile.conditions">
+            {{condition}}
           </nb-list-item>  
-          <nb-list-item >
-            Hypertension
-          </nb-list-item>           <!-- Enter for loop here -->
+          
         </nb-list>
     </nb-card>
   </div>

@@ -20,15 +20,40 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+import { PatientDetailsComponent } from './patient-details/patient-details.component';
+import {
+  NbActionsModule,
+  NbButtonModule,
+  NbCardModule,
+  NbCheckboxModule,
+  NbIconModule,
+  NbInputModule,
+  NbRadioModule,
+  NbSelectModule,
+  NbUserModule,
+} from '@nebular/theme';
 
+
+
+import { FormsModule as ngFormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, PatientDetailsComponent],
   imports: [
+    NbActionsModule,
+    NbButtonModule,
+    NbCardModule,
+    NbCheckboxModule,
+    NbIconModule,
+    NbInputModule,
+    NbRadioModule,
+    NbSelectModule,
+    NbUserModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-
+    ngFormsModule,
+    ReactiveFormsModule,
     ThemeModule.forRoot(),
 
     NbSidebarModule.forRoot(),

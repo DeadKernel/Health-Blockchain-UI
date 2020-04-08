@@ -25,7 +25,7 @@ const routes: Routes = [
         component: FormLayoutsComponent,
       },
       {
-        path: 'buttons',
+        path: 'patient-details',
         component: ButtonsComponent,
       },
       {
