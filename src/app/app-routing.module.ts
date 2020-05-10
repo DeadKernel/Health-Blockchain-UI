@@ -9,6 +9,8 @@ import {
   NbResetPasswordComponent,
 } from '@nebular/auth';
 import { PatientDetailsComponent } from './patient-details/patient-details.component';
+import { DoctorDetailsComponent } from './doctor-details/doctor-details.component';
+import { UserTypeComponent } from './user-type/user-type.component';
 
 const routes: Routes = [
   {
@@ -48,6 +50,14 @@ const routes: Routes = [
         path: 'patient-details',
         component: PatientDetailsComponent
       },
+      {
+        path: 'doctor-details',
+        component: DoctorDetailsComponent
+      },
+      {
+        path: 'user-type',
+        component: UserTypeComponent
+      }
       
     ],
   },
