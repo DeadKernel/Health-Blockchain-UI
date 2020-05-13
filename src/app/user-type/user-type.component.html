@@ -1,3 +1,29 @@
-<p>
-  user-type works!
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>Enter type of profile</nb-card-header>
+      <nb-card-body>
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="docType" class="label">type</label>
+            <nb-radio-group formControlName="gender" name="GenderId">
+              <nb-radio
+                [value]="'Doctor'">
+                Doctor
+              </nb-radio>
+              <nb-radio
+                [value]="'Patient'">
+                Patient
+              </nb-radio>
+            </nb-radio-group>
+          </div>
+          <button type="submit" nbButton status="danger">Submit</button>
+        </form>
+      </nb-card-body>
+    </nb-card>
+
+   
+  </div>
+
+ 
+</div>
