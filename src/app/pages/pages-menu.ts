@@ -1,7 +1,7 @@
 import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
-  
+
   {
     title: 'Home',
     icon: 'home-outline',
@@ -12,7 +12,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'Add Doctors',
     icon: 'activity',
     link: '/pages/add-doctor',
-    
   },
   // {
   //   title: 'FEATURES',
@@ -211,7 +210,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'My Reports',
         link: '/pages/tables/my-reports',
-        icon: 'folder'
+        icon: 'folder',
       },
   //   ],
   // },
