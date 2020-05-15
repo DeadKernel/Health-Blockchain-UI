@@ -1,3 +1,51 @@
-<p>
-  doctor-details works!
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>Enter details</nb-card-header>
+      <nb-card-body>
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="GenderId" class="label">Gender</label>
+            <nb-radio-group formControlName="gender" name="GenderId">
+              <nb-radio
+                [value]="'Male'">
+                Male
+              </nb-radio>
+              <nb-radio
+                [value]="'Female'">
+                Female
+              </nb-radio>
+              <nb-radio
+                [value]="'Other'">
+                Other
+              </nb-radio>
+            </nb-radio-group>
+          </div>
+          <div class="form-group">
+            <label for="dob" class="label">Enter Date of Birth</label>
+            <input nbInput
+               placeholder="Click to open Date Picker"
+               [nbDatepicker]="formpicker"
+               id="dob"
+               formControlName="dob">
+            <nb-datepicker #formpicker ></nb-datepicker>
+          </div>
+          <div class="form-group">
+            <label for="qualifications" class="label">Enter qualifications</label>
+            <textarea nbInput placeholder="E.g. M.B.B.S., M.D." id="conditions" formControlName="conditions"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="weight" class="label">Enter DocID</label>
+            <input type="number" nbInput fullWidth id="weight" placeholder="E.g. 50" formControlName="weight">
+          </div>
+          
+          <button type="submit" nbButton status="danger">Submit</button>
+        </form>
+      </nb-card-body>
+    </nb-card>
+
+   
+  </div>
+
+ 
+</div>

@@ -21,7 +21,6 @@ export class UserService extends UserData {
     work: 'Dentist',
   };
   private contacts: Contacts[] = [
-   
     { user: this.users.eva, type: this.types.home },
     { user: this.users.jack, type: this.types.mobile },
     { user: this.users.lee, type: this.types.mobile },
@@ -29,22 +28,20 @@ export class UserService extends UserData {
     { user: this.users.kate, type: this.types.work },
   ];
   private recentUsers: RecentUsers[]  = [
-    { user: this.users.alan, type: this.types.home, time: this.time.setHours(21, 12), action: "Revoked access"},
-    { user: this.users.eva, type: this.types.home, time: this.time.setHours(17, 45), action: "Granted access"},
-    
-    { user: this.users.lee, type: this.types.mobile, time: this.time.setHours(11, 24), action: "Revoked access"},
-    { user: this.users.jack, type: this.types.mobile, time: this.time.setHours(10, 45), action: "Granted access"},
-    { user: this.users.kate, type: this.types.work, time: this.time.setHours(9, 42), action: "Granted access"},
-    { user: this.users.kate, type: this.types.work, time: this.time.setHours(9, 31), action: "Revoked access"},
-    { user: this.users.jack, type: this.types.mobile, time: this.time.setHours(8, 0), action: "Granted access"},
-    { user: this.users.alan, type: this.types.home, time: this.time.setHours(21, 12), action: "Revoked access"},
-    { user: this.users.eva, type: this.types.home, time: this.time.setHours(17, 45), action: "Granted access"},
-   
-    { user: this.users.lee, type: this.types.mobile, time: this.time.setHours(11, 24), action: "Revoked access"},
-    { user: this.users.jack, type: this.types.mobile, time: this.time.setHours(10, 45), action: "Granted access"},
-    { user: this.users.kate, type: this.types.work, time: this.time.setHours(9, 42), action: "Granted access"},
-    { user: this.users.kate, type: this.types.work, time: this.time.setHours(9, 31), action: "Revoked access"},
-    { user: this.users.jack, type: this.types.mobile, time: this.time.setHours(8, 0), action: "Granted access"},
+    { user: this.users.alan, type: this.types.home, time: this.time.setHours(21, 12), action: 'Revoked access'},
+    { user: this.users.eva, type: this.types.home, time: this.time.setHours(17, 45), action: 'Granted access'},
+    { user: this.users.lee, type: this.types.mobile, time: this.time.setHours(11, 24), action: 'Revoked access'},
+    { user: this.users.jack, type: this.types.mobile, time: this.time.setHours(10, 45), action: 'Granted access'},
+    { user: this.users.kate, type: this.types.work, time: this.time.setHours(9, 42), action: 'Granted access'},
+    { user: this.users.kate, type: this.types.work, time: this.time.setHours(9, 31), action: 'Revoked access'},
+    { user: this.users.jack, type: this.types.mobile, time: this.time.setHours(8, 0), action: 'Granted access'},
+    { user: this.users.alan, type: this.types.home, time: this.time.setHours(21, 12), action: 'Revoked access'},
+    { user: this.users.eva, type: this.types.home, time: this.time.setHours(17, 45), action: 'Granted access'},
+    { user: this.users.lee, type: this.types.mobile, time: this.time.setHours(11, 24), action: 'Revoked access'},
+    { user: this.users.jack, type: this.types.mobile, time: this.time.setHours(10, 45), action: 'Granted access'},
+    { user: this.users.kate, type: this.types.work, time: this.time.setHours(9, 42), action: 'Granted access'},
+    { user: this.users.kate, type: this.types.work, time: this.time.setHours(9, 31), action: 'Revoked access'},
+    { user: this.users.jack, type: this.types.mobile, time: this.time.setHours(8, 0), action: 'Granted access'},
   ];
 
   getUsers(): Observable<any> {

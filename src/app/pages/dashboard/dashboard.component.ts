@@ -103,11 +103,9 @@ export class DashboardComponent implements OnDestroy {
       .subscribe((data) => {
         this.solarValue = data;
       });
-    
     this.profileService.getPatientDetails(JSON.parse(localStorage.getItem('auth_app_token')).value).subscribe(data=>{
-      console.log(data);
+      console.log(data); 
       
-       
         this.profile = {
           fullName: data['response'].fullName,
           gender: data['response'].gender,
@@ -115,15 +113,14 @@ export class DashboardComponent implements OnDestroy {
           height: data['response'].height,
           age: moment().diff(moment(data['response'].dob,'DD/MM/YYYY'),'years').toString(),
           conditions: data['response'].conditions,
-          allergies: data['response'].allergies
+          allergies: data['response'].allergies,
            
         }
-      
     },
     err =>{
       console.log(err);
     });
-  }
+  } 
 
   ngOnDestroy() {
     this.alive = false;

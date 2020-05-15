@@ -1,6 +1,6 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NbAuthModule, NbDummyAuthStrategy, NbAuthStrategy, NbPasswordAuthStrategy } from '@nebular/auth';
+import { NbAuthModule, NbPasswordAuthStrategy } from '@nebular/auth';
 import { NbSecurityModule, NbRoleProvider } from '@nebular/security';
 import { of as observableOf } from 'rxjs';
 
@@ -54,7 +54,6 @@ import { SecurityCamerasService } from './mock/security-cameras.service';
 import { MockDataModule } from './mock/mock-data.module';
 
 const socialLinks = [
-  
 ];
 
 const DATA_SERVICES = [
@@ -103,28 +102,28 @@ export const NB_CORE_PROVIDERS = [
           endpoint: '/login',
           redirect: {
             success: '/pages/dashboard',
-            failure: null
+            failure: null,
           },
-          method: 'post'
+          method: 'post',
         },
         register: {
           endpoint: '/register',
           redirect: {
             success: '/auth/login',
-            failure: null
+            failure: null,
           },
-          method: 'post'
-        }
-      },)
+          method: 'post',
+        },
+      }),
     ],
     forms: {
       login: {
         socialLinks: socialLinks,
-        rememberMe: false
+        rememberMe: false,
       },
       register: {
         socialLinks: socialLinks,
-        terms: false
+        terms: false,
 
       },
     },

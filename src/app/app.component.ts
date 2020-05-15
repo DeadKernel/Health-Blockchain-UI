@@ -17,7 +17,7 @@ import {Router} from '@angular/router';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private analytics: AnalyticsService, private seoService: SeoService, private menuService:NbMenuService,private router: Router) {
+  constructor (private analytics: AnalyticsService, private seoService: SeoService, private menuService:NbMenuService, private router: Router) {
     this.menuService.onItemClick()
       .subscribe((event) => {
         this.onContecxtItemSelection(event.item.title);
@@ -26,12 +26,10 @@ export class AppComponent implements OnInit {
 
   }
 onContecxtItemSelection(title) {
-  if(title == 'Log out'){
+  if (title === 'Log out') {
     localStorage.removeItem('auth_app_token');
     this.router.navigate(['/auth/login']);
   }
-  
-
 }
   ngOnInit(): void {
     this.analytics.trackPageViews();
