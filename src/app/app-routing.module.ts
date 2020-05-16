@@ -12,6 +12,7 @@ import { PatientDetailsComponent } from './patient-details/patient-details.compo
 import { DoctorDetailsComponent } from './doctor-details/doctor-details.component';
 import { UserTypeComponent } from './user-type/user-type.component';
 import { UploadFilesComponent } from './upload-files/upload-files.component'; 
+import { AccessComponent } from './access/access.component';
 const routes: Routes = [
   {
     path: 'pages',
@@ -61,6 +62,10 @@ const routes: Routes = [
       {
         path: 'upload-files',
         component: UploadFilesComponent
+      },
+      {
+        path: 'access',
+        component: AccessComponent
       }
     ],
   },

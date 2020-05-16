@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-12">
+      <nb-card>
+        <nb-card-header>Grant or Revoke access</nb-card-header>
+        <nb-card-body>
+          <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="DoctorList">Choose a Doctor</label>
+              <select id="Doctor">
+                <option value="Doc1">Doc1</option>
+                <option value="Doc2">Doc2</option>
+              </select>
+
+            </div>
+            
+            <div class="form-group">
+              <label for="AccessOpt" class="label">Action</label>
+              <nb-radio-group formControlName="gender" name="AccessOpt">
+                <nb-radio
+                  [value]="'grant'">
+                  Grant Access
+                </nb-radio>
+                <nb-radio
+                  [value]="'revoke'">
+                  Revoke Access
+                </nb-radio>
+              </nb-radio-group>
+            </div>
+            
+            <button type="submit" nbButton status="danger">Submit</button>
+          </form>
+        </nb-card-body>
+      </nb-card>
+  
+     
+    </div>
+  
+   
+  </div>
+  

@@ -9,6 +9,7 @@ export class ProfileService {
   private getPatientDetailsUrl = '/getPatient';
   private addPatientDetailsUrl = '/addPatientDetails';
   private uploadFilesUrl = '/uploadFiles';
+  private allowAccessUrl = '/allowAccess';
   constructor(private httpClient: HttpClient) { }
 
   public getPatientDetails(email:string) {
@@ -20,7 +21,12 @@ export class ProfileService {
     return this.httpClient.post(this.baseUrl+this.uploadFilesUrl,JSON.stringify({
       FileType: requestObj.FileType,
       upload : requestObj.upload
+    }))
+  }
 
+  public allowAccess(requestObj) {
+    return this.httpClient.post(this.baseUrl+this.allowAccessUrl,JSON.stringify({
+      accessOpt : requestObj.accessOpt
     }))
   }
 
