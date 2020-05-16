@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-12">
+      <nb-card>
+        <nb-card-header>Upload Reports</nb-card-header>
+        <nb-card-body>
+          <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="FileType" class="label">File Type</label>
+              <nb-radio-group formControlName="File Type" name="FileType">
+                <nb-radio
+                  [value]="'Report'">
+                  report
+                </nb-radio>
+                <nb-radio
+                  [value]="'Prescription'">
+                  Prescription
+                </nb-radio>
+                <nb-radio
+                  [value]="'X-ray / CT scan'">
+                  Other
+                </nb-radio>
+              </nb-radio-group>
+            </div>
+            <div class="form-group">
+              <label for="upload" class="label">Select File</label>
+              <input type="file" nbInput fullWidth id="upload" placeholder="E.g. " formControlName="upload">
+            </div>
+            <button type="submit" nbButton status="danger">Submit</button>
+          </form>
+        </nb-card-body>
+      </nb-card>
+  
+     
+    </div>
+  
+   
+  </div>
+  

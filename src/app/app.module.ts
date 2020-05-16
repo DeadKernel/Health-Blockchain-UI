@@ -38,8 +38,9 @@ import {
 import { FormsModule as ngFormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DoctorDetailsComponent } from './doctor-details/doctor-details.component';
 import { UserTypeComponent } from './user-type/user-type.component';
+import { UploadFilesComponent} from './upload-files/upload-files.component';
 @NgModule({
-  declarations: [AppComponent, PatientDetailsComponent, DoctorDetailsComponent, UserTypeComponent],
+  declarations: [AppComponent, PatientDetailsComponent, DoctorDetailsComponent, UserTypeComponent, UploadFilesComponent],
   imports: [
     NbActionsModule,
     NbButtonModule,

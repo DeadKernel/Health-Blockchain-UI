@@ -8,13 +8,15 @@ export class ProfileService {
   private baseUrl = 'http://localhost:3000/api';
   private getPatientDetailsUrl = '/getPatient';
   private addPatientDetailsUrl = '/addPatientDetails';
-  
+
   constructor(private httpClient: HttpClient) { }
 
   public getPatientDetails(email:string) {
     let params = new HttpParams().set('email',email);
     return this.httpClient.get(this.baseUrl+this.getPatientDetailsUrl,{params: params});
   }
+  
+
 
   public addPatientDetails(requestObj) {
     console.log(requestObj.email);

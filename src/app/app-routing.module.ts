@@ -11,7 +11,7 @@ import {
 import { PatientDetailsComponent } from './patient-details/patient-details.component';
 import { DoctorDetailsComponent } from './doctor-details/doctor-details.component';
 import { UserTypeComponent } from './user-type/user-type.component';
-
+import { UploadFilesComponent } from './upload-files/upload-files.component'; 
 const routes: Routes = [
   {
     path: 'pages',
@@ -57,8 +57,11 @@ const routes: Routes = [
       {
         path: 'user-type',
         component: UserTypeComponent
+      },
+      {
+        path: 'upload-files',
+        component: UploadFilesComponent
       }
-      
     ],
   },
  
