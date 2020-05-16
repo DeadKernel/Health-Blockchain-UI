@@ -15,16 +15,7 @@ export class UploadFilesComponent implements OnInit {
   });
 
   onSubmit() {
-    var requesObj = this.profileForm.value;
-    requesObj.email = JSON.parse(localStorage.getItem('auth_app_token')).value.toString();
-
-    this.profileService.uploadFiles(requesObj).subscribe(data=>{
-      console.log(data);
-      this.router.navigate(['auth/login']);
-    },
-    err=>{
-      console.log(err);
-    })
+ 
   }
 
   constructor(private profileService: ProfileService, private router:Router) { }
