@@ -103,7 +103,7 @@ export class DashboardComponent implements OnDestroy {
       .subscribe((data) => {
         this.solarValue = data;
       });
-    this.profileService.getPatientDetails(JSON.parse(localStorage.getItem('auth_app_token')).value).subscribe(data=>{
+    this.profileService.getUserDetails(JSON.parse(localStorage.getItem('auth_app_token')).value).subscribe(data=>{
       console.log(data); 
       
         this.profile = {
