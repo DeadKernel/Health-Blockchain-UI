@@ -5,14 +5,14 @@
       <nb-card-body>
         <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
-            <label for="docType" class="label">type</label>
-            <nb-radio-group formControlName="gender" name="GenderId">
+            <label for="docType" class="label">Select user type:</label>
+            <nb-radio-group formControlName="userType" name="userType">
               <nb-radio
-                [value]="'Doctor'">
+                [value]="'doctor'">
                 Doctor
               </nb-radio>
               <nb-radio
-                [value]="'Patient'">
+                [value]="'patient'">
                 Patient
               </nb-radio>
             </nb-radio-group>

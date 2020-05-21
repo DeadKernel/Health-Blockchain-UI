@@ -6,28 +6,28 @@ import * as moment from 'moment';
 })
 export class ProfileService {
   private baseUrl = 'http://localhost:3000/api';
-  private getPatientDetailsUrl = '/getPatient';
+  private getUserDetailsUrl = '/getUser';
   private addPatientDetailsUrl = '/addPatientDetails';
 
   constructor(private httpClient: HttpClient) { }
 
-  public getPatientDetails(email:string) {
+  public getUserDetails(email:string) {
     let params = new HttpParams().set('email',email);
-    return this.httpClient.get(this.baseUrl+this.getPatientDetailsUrl,{params: params});
+    return this.httpClient.get(this.baseUrl+this.getUserDetailsUrl,{params: params});
   }
   
 
 
   public addPatientDetails(requestObj) {
     console.log(requestObj.email);
-   return this.httpClient.post(this.baseUrl+this.addPatientDetailsUrl,JSON.stringify({
+   return this.httpClient.post(this.baseUrl+this.addPatientDetailsUrl,{
       email: requestObj.email,
       gender: requestObj.gender,
-      height: requestObj.height,
-      weight: requestObj.weight,
+      height: requestObj.height.toString()+'cm',
+      weight: requestObj.weight.toString()+'kg',
       conditions: requestObj.conditionsList,
       allergies: requestObj.allergiesList,
       dob: moment(requestObj.dob).format('DD/MM/YYYY').toString()
-   }))
+   })
   }
 }

@@ -5,8 +5,8 @@
       <nb-card-body>
         <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
-            <label for="GenderId" class="label">Gender</label>
-            <nb-radio-group formControlName="gender" name="GenderId">
+            <label for="gender" class="label">Gender</label>
+            <nb-radio-group formControlName="gender" name="gender">
               <nb-radio
                 [value]="'Male'">
                 Male
@@ -32,12 +32,12 @@
           </div>
           <div class="form-group">
             <label for="qualifications" class="label">Enter qualifications</label>
-            <textarea nbInput placeholder="E.g. M.B.B.S., M.D." id="conditions" formControlName="conditions"></textarea>
+            <textarea nbInput placeholder="E.g. M.B.B.S., M.D." id="qualifications" formControlName="qualifications"></textarea>
           </div>
-          <!-- <div class="form-group">
-            <label for="weight" class="label">Enter DocID</label>
-            <input type="number" nbInput fullWidth id="weight" placeholder="E.g. 50" formControlName="weight">
-          </div> -->
+          <div class="form-group">
+            <label for="docId" class="label">Enter Medical Registration ID</label>
+            <input type="text" nbInput fullWidth id="docId" placeholder="E.g. 2007/02/0260" formControlName="docId">
+          </div>
           
           <button type="submit" nbButton status="danger">Submit</button>
         </form>

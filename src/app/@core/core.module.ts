@@ -109,7 +109,7 @@ export const NB_CORE_PROVIDERS = [
         register: {
           endpoint: '/register',
           redirect: {
-            success: '/auth/login',
+            success: '/auth/user-type',
             failure: null,
           },
           method: 'post',
